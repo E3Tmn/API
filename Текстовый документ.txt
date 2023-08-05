@@ -1,0 +1,18 @@
+import requests
+
+
+urlSh = 'https://wttr.in/Шереметьево?nMTq&lang=ru'
+urlLn = 'https://wttr.in/Лондон?nMTq&lang=ru'
+urlCh = 'https://wttr.in/Череповец?nMTq&lang=ru'
+
+responseSh = requests.get(urlSh)
+responseSh.raise_for_status()
+print(responseSh.text)
+
+responseLn = requests.get(urlLn)
+responseLn.raise_for_status()
+print(responseLn.text)
+
+responseCh = requests.get(urlCh)
+responseCh.raise_for_status()
+print(responseCh.text)
